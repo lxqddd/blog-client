@@ -27,7 +27,7 @@
           <div v-for="edge in $page.posts.edges" :key="edge.node.id" class="post-preview">
             <g-link :to="`/post/${edge.node.id}`">
               <h2 class="post-title">
-               {{ edge.node.title }}
+                {{ edge.node.title }}
               </h2>
               <!-- <h3 class="post-subtitle">
                 Problems look mighty small from 150 miles up
@@ -36,16 +36,18 @@
             <p class="post-meta">
               Posted on
               <!-- <a href="#">Start Bootstrap</a> -->
-              {{edge.node.created_at}}
+              {{ edge.node.created_at }}
             </p>
             <p>
               <g-link
                 v-for="tag in edge.node.tags"
-                :key="tag.id" :to="'/tag/' + tag.id"
+                :key="tag.id"
+                :to="'/tag/' + tag.id"
                 style="margin-right: 15px;"
-              >{{tag.title}}</g-link>
+                >{{ tag.title }}</g-link
+              >
             </p>
-            <hr>
+            <hr />
           </div>
           <!-- Pager -->
           <Pager :info="$page.posts.pageInfo" />
