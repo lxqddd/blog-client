@@ -5,7 +5,7 @@
       class="masthead"
       style="background-image: url('/img/post-bg.jpg')"
       :style="{
-        backgroundImage: `url('http://localhost:1337${$page.post.cover.url}')`
+        backgroundImage: `url('${$page.post.cover.url}')`
       }"
     >
       <div class="overlay"></div>
